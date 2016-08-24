@@ -1,0 +1,128 @@
+.set-font(@fontFamily; @fontWeight; @fontStyle; @fontSize; @fontColor: white){
+	font-family: @fontFamily;
+	font-weight: @fontWeight;
+	font-style: @fontStyle;
+	font-size: @fontSize;
+	color: @fontColor;
+}
+
+.vertical-align{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.justify-content-new(@position) {
+	-webkit-justify-content: @position;
+	justify-content: @position;
+	flex: @position;
+}
+
+.justify-content-old(@position) {
+	-webkit-box-pack: @position;
+	-moz-box-pack: @position;
+	-ms-flex-pack: @position;
+}
+
+.align-items-new(@position) {
+	-webkit-align-items: @position;
+	align-items: @position;
+	flex: @position;
+}
+
+.align-items-old(@position) {
+	-ms-flex-align: @position;
+	-webkit-box-align: @position;
+	-moz-box-align: @position;
+}
+
+.flex-wrap(@style) {
+	-webkit-flex-wrap: @style;
+	-ms-flex-wrap: @style;
+	flex-wrap: @style;
+}
+
+.display-flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flex-order(@index) {
+	-webkit-box-ordinal-group: @index + 1;
+	-moz-box-ordinal-group: @index + 1;
+	-webkit-order: @index;
+	-ms-flex-order: @index;
+	order: @index;
+}
+
+.flex-size(@grow; @shrink; @size: auto) {
+	-webkit-flex: @grow @shrink @size;
+	-ms-flex: @grow @shrink @size;
+	flex: @grow @shrink @size;
+}
+
+.align-self(@position) {
+	-webkit-align-self: @position;
+	-ms-flex-item-align: @position;
+	align-self: @position;
+}
+
+.flex-direction-new(@direction) {
+	-webkit-flex-direction: @direction;
+	-ms-flex-direction: @direction;
+	flex-direction: @direction;
+}
+
+.flex-direction-old(@direction) {
+	-webkit-box-orient: @direction;
+	-moz-box-orient: @direction;
+}
+
+.flex-orientation-old(@orient) {
+    -webkit-box-direction: @orient;
+    -moz-box-direction: @orient;
+}
+
+.image-blur(@pixels) {
+	-webkit-filter: blur(@pixels);
+	-moz-filter: blur(@pixels);
+	-o-filter: blur(@pixels);
+	-ms-filter: blur(@pixels);
+	filter: blur(@pixels);
+}
+
+.rgba-split(@property, @red, @green, @blue, @opacity) {
+    Ignore: ~"a;@{property}:rgba(@{red}, @{green}, @{blue}, @{opacity})";
+    //@property: rgba(red(@color), green(@color), blue(@color), @opacity);
+}
+
+.rgba(@property, @color, @opacity) {
+    .rgba-split(@property, red(@color), green(@color), blue(@color), @opacity);
+}
+
+.box-shadow(@xpx, @ypx, @blurpx, @spreadpx, @color: rgba(0, 0, 0, 0.75)) {
+    -webkit-box-shadow: @xpx @ypx @blurpx @spreadpx @color;
+    -moz-box-shadow: @xpx @ypx @blurpx @spreadpx @color;
+    box-shadow: @xpx @ypx @blurpx @spreadpx @color;
+}
+
+.word-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.transition(@duration, @transition) {
+    -webkit-transition: @duration -webkit-filter @transition;
+    -moz-transition: @duration -moz-filter @transition;
+    -o-transition: @duration -o-filter @transition;
+    transition: @duration filter @transition;
+}

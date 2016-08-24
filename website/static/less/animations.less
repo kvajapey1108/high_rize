@@ -1,0 +1,36 @@
+
+.animation(@name, @duration, @transition, @direction) {
+  -webkit-animation: @name @duration @transition @direction;
+  -moz-animation: @name @duration @transition @direction;
+  -ms-animation: @name @duration @transition @direction;
+  -o-animation: @name @duration @transition @direction;
+  animation: @name @duration @transition @direction;
+}
+
+.animation-delay(@duration) {
+  -webkit-animation-delay: @duration;
+  -moz-animation-delay: @duration;
+  animation-delay: @duration;
+}
+
+@-webkit-keyframes blur {
+  to {
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+  }
+}
+
+@-moz-keyframes blur {
+  to {
+    -moz-filter: blur(15px);
+    filter: blur(15px);
+  }
+}
+
+@keyframes blur {
+  to {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    filter: blur(15px);
+  }
+}

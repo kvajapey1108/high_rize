@@ -1,0 +1,357 @@
+@import "./custom-mixins.less";
+@import "./variables.less";
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 900px;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-container {
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(flex-start);
+    .align-items-old(start);
+    .flex-wrap(wrap);
+    width: 100%;
+    margin: 0px 0px;
+    height: 100%;
+}
+.background-container {
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(center);
+    .align-items-old(center);
+    .flex-wrap(wrap);
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.background-container.large-pad {
+    padding: 100px 0px;
+}
+
+.background-container.small-pad {
+    padding: 50px 0px;
+}
+
+.background-container.no-wrap {
+    .flex-wrap(nowrap);
+}
+
+.background-container.half-width {
+    width: 50%;
+}
+
+.background-container.top {
+    .align-items-new(flex-start);
+    .align-items-old(start);
+}
+
+.flex-container {
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(center);
+    .align-items-old(center);
+    .flex-wrap(wrap);
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.flex-container.full-height {
+    height: 100%;
+}
+
+.flex-container.no-margin {
+    margin: 0px;
+}
+
+.flex-container.no-pad {
+    padding: 0px;
+}
+
+.flex-container.border-line {
+    border-bottom: 2px solid @highrizeGray;
+}
+
+.flex-container.left {
+    .justify-content-new(flex-start);
+    .justify-content-old(start);
+}
+
+.flex-container.right {
+    .justify-content-new(flex-end);
+    .justify-content-old(end);
+}
+
+.flex-container.justify {
+    .justify-content-new(space-between);
+    .justify-content-old(justify);
+}
+
+.flex-container.bottom {
+    .align-items-new(flex-end);
+    .align-items-old(end);
+}
+
+.flex-container.top {
+    .align-items-new(flex-start);
+    .align-items-old(start);
+}
+
+.flex-container.narrow {
+    width: 80%;
+}
+
+.flex-container.quarter {
+    width: 25%;
+}
+
+.flex-container.third {
+    width: 30%;
+}
+
+.flex-container.no-wrap {
+    .flex-wrap(nowrap);
+}
+
+.flex-container.small-pad {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.flex-container.large-pad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+    .background-container.half-width {
+        width: 100%;
+    }
+    .flex-container.third {
+        width: 80%;
+    }
+    .flex-container.responsive {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+    }
+}
+
+.title-text {
+    .set-font(@titleFont; @lighterWeight; normal; 60px; @highrizeWhite);
+    text-align: center;
+}
+
+.large-sub-title-text {
+    .set-font(@titleFont; @lighterWeight; normal; 50px; @highrizeWhite);
+    text-align: center;
+}
+
+.sub-title-text {
+    .set-font(@titleFont; @lighterWeight; normal; 35px; @highrizeWhite);
+    text-align: center;
+}
+
+.large-content-text {
+    .set-font(@headerFont; @normalWeight; normal; 24px; @highrizeWhite); 
+    text-align: center;
+}
+
+.site-text {
+    .set-font(@contentFont; @normalWeight; normal; 18px; @highrizeWhite);
+    text-align: center;
+}
+
+.site-text.small {
+    font-size: 14px;
+}
+
+.page-label-text {
+    .set-font(@highrizeFont; @normalWeight; normal; 16px; @highrizeBlack);
+    text-align: center;
+}
+
+.page-label-text-med {
+    .set-font(@highrizeFont; @normalWeight; normal; 14px; @highrizeBlack);
+    text-align: center;
+}
+
+.page-label-text.blue {
+    color: @highrizeBlue;
+}
+
+.page-label-text.white {
+    color: @highrizeWhite;
+}
+
+.page-label-text-small {
+    .set-font(@contentFont; @normalWeight; normal; 12px; @highrizeGray);
+}
+
+.page-label-text-small.black {
+    color: @highrizeBlack;
+}
+
+.title-text.bold, .sub-title-text.bold, .site-text.bold, .large-content-text.bold, .large-sub-title-text.bold {
+    font-weight: 700;
+}
+
+.title-text.left-text, .sub-title-text.left-text, .site-text.left-text, .large-content-text.left-text, .large-sub-title-text.left-text {
+    text-align: left;
+}
+
+.title-text.right-text, .sub-title-text.right-text, .site-text.right-text, .large-content-text.right-text, .large-sub-title-text.right-text {
+    text-align: right;
+}
+
+.title-text.black, .sub-title-text.black, .site-text.black, .large-content-text.black, .large-sub-title-text.black {
+    color: @highrizeBlack;
+}
+
+.title-text.gray, .sub-title-text.gray, .site-text.gray, .large-content-text.gray, .large-sub-title-text.gray {
+    color: @highrizeGray;
+}
+
+.title-text.blue, .sub-title-text.blue, .site-text.blue, .large-content-text.blue, .large-sub-title-text.blue {
+    color: @highrizeBlue;
+}
+
+.no-style-list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.button {
+    width: auto;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: @highrizeBlue;
+    .set-font(@contentFont; @normalWeight; normal; 18px; @highrizeWhite);
+    cursor: pointer;
+    border-radius: @radiusSmall;
+    text-align: center;
+}
+
+.button.outline {
+    background-color: @highrizeWhite;
+    border: 2px solid @highrizeBlue;
+    color: @highrizeBlue;
+}
+
+.button.outline:hover {
+    color: @highrizeWhite;
+    background-color: @highrizeBlueHover;
+}
+
+.button.small {
+    .set-font(@contentFont; @normalWeight; normal; 12px; @highrizeWhite);
+    padding: 5px 10px;
+}
+
+.medium-button {
+    width: auto;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: hsl(203, 82%, 28%);
+    .set-font(@contentFont; @normalWeight; normal; 18px; @highrizeWhite);
+    cursor: pointer;
+    border: none;
+    border-radius: @radiusSmall;
+    text-align: center;
+    .box-shadow(0px; 0px; 0px; 0px);
+    outline: none;
+}
+
+.large-button {
+    padding: 20px 30px;
+}
+
+.medium-button:hover, .button:hover {
+    background-color: @highrizeBlueHover;
+}
+
+.medium-button.white, .button.white {
+    background-color: @highrizeWhite;
+    color: @highrizeBlue;
+    border: 1px solid @highrizeBlue;
+}
+
+.medium-button.white:hover, .button.white:hover {
+    background-color: @highrizeBlueHover;
+    color: @highrizeWhite;
+}
+
+.button.gray {
+    background-color: @highrizeGray;
+    color: @highrizeWhite;
+    border: 1px solid @highrizeGray;
+}
+
+.medium-button.green:hover, .button.green:hover {
+    background-color: hsl(128, 52%, 54%)
+}
+
+.text-link {
+    cursor: pointer;
+}
+
+.text-link:hover {
+    color: @highrizeBlue;
+}
+
+.text-link.underline {
+    text-decoration: underline;
+}
+
+.text-link.inline {
+    display: inline;
+}
+
+.text-input {
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(center);
+    .align-items-old(center);
+    .flex-wrap(wrap);
+    width: 100%;
+    .set-font(@contentFont; @normalWeight; normal; 16px; @highrizeBlack);
+    border: 1px solid @highrizeGray;
+    .rgba(background-color; @highrizeWhite; 0.75);
+    padding: 5px;
+    margin: 5px;
+    border-radius: @radiusSmall;
+}
+
+.left-arrow {
+    background: url(../images/icons/left-arrow-white.png);
+    height: 40px;
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

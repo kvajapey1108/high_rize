@@ -1,0 +1,60 @@
+@import './variables.less';
+@import './custom-mixins.less';
+@import './animations.less';
+@import '../css/animate.css';
+
+.page-background {
+    background-image: url(../images/backgrounds/dark-flower.jpg);
+    background-size: 110% 110%;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(center);
+    .align-items-old(center);
+    .flex-wrap(wrap);
+    .animation(blur; 2s; linear; forwards);
+    .animation-delay(5s);
+}
+
+.page-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    z-index: 100;
+}
+
+.main-content-container{
+    background: transparent;
+    border: 1px solid @highrizeWhite;
+    opacity: 0;
+    .animation(fadeIn; 2s; ease; forwards);
+    .animation-delay(5s);
+    height: 500px;
+}
+
+.high-rize.title-text {
+    .animation(fadeOut; 1s; linear; forwards);
+    .animation-delay(4s);
+    .display-flex;
+    .justify-content-new(center);
+    .justify-content-old(center);
+    .align-items-new(center);
+    .align-items-old(center);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.widget {
+    display: none;
+}

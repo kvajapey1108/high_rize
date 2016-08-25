@@ -23,27 +23,28 @@
 }
 @-webkit-keyframes blur {
   to {
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 @-moz-keyframes blur {
   to {
-    -moz-filter: blur(15px);
-    filter: blur(15px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 @keyframes blur {
   to {
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    filter: blur(15px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 .page-background {
-  background-image: url(../images/backgrounds/dark-flower.jpg);
-  background-size: 110% 110%;
-  background-position: center center;
+  background-image: url(../images/saheer/test.png);
+  background-color: #000000;
+  background-position: right center;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -70,9 +71,9 @@
   -ms-animation: blur 2s linear forwards;
   -o-animation: blur 2s linear forwards;
   animation: blur 2s linear forwards;
-  -webkit-animation-delay: 5s;
-  -moz-animation-delay: 5s;
-  animation-delay: 5s;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
 }
 .page-container {
   position: fixed;
@@ -85,19 +86,29 @@
   background: transparent;
   z-index: 100;
 }
-.main-content-container {
+.main-container {
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
+  height: 500px;
   opacity: 0;
-  -webkit-animation: fadeIn 2s ease forwards;
-  -moz-animation: fadeIn 2s ease forwards;
-  -ms-animation: fadeIn 2s ease forwards;
-  -o-animation: fadeIn 2s ease forwards;
-  animation: fadeIn 2s ease forwards;
+  -webkit-animation: fadeIn 1s linear forwards;
+  -moz-animation: fadeIn 1s linear forwards;
+  -ms-animation: fadeIn 1s linear forwards;
+  -o-animation: fadeIn 1s linear forwards;
+  animation: fadeIn 1s linear forwards;
   -webkit-animation-delay: 5s;
   -moz-animation-delay: 5s;
   animation-delay: 5s;
-  height: 500px;
+}
+.enter-one {
+  -webkit-animation: slideInDown 2s ease forwards;
+  -moz-animation: slideInDown 2s ease forwards;
+  -ms-animation: slideInDown 2s ease forwards;
+  -o-animation: slideInDown 2s ease forwards;
+  animation: slideInDown 2s ease forwards;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
 }
 .high-rize.title-text {
   -webkit-animation: fadeOut 1s linear forwards;
@@ -129,7 +140,37 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 .widget {
   display: none;
+}
+.main-container {
+  height: 100%;
+}
+.right-nav-container {
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 10%;
+}
+.nav-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 10px 5px;
+}
+.nav-button:hover {
+  border: 1px solid #ffffff;
+}
+.top-row {
+  height: 60%;
+}
+.bottom-row {
+  height: 40%;
 }

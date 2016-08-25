@@ -4,9 +4,10 @@
 @import '../css/animate.css';
 
 .page-background {
-    background-image: url(../images/backgrounds/dark-flower.jpg);
-    background-size: 110% 110%;
-    background-position: center center;
+    background-image: url(../images/saheer/test.png);
+    background-color: @highrizeBlack;
+    background-position: right center;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     .display-flex;
@@ -16,7 +17,7 @@
     .align-items-old(center);
     .flex-wrap(wrap);
     .animation(blur; 2s; linear; forwards);
-    .animation-delay(5s);
+    .animation-delay(3s);
 }
 
 .page-container {
@@ -31,13 +32,18 @@
     z-index: 100;
 }
 
-.main-content-container{
+.main-container{
     background: transparent;
-    border: 1px solid @highrizeWhite;
-    opacity: 0;
-    .animation(fadeIn; 2s; ease; forwards);
-    .animation-delay(5s);
+    border: 2px solid @highrizeWhite;
     height: 500px;
+    opacity: 0;
+    .animation(fadeIn; 1s; linear; forwards);
+    .animation-delay(5s);
+}
+
+.enter-one {
+    .animation(slideInDown; 2s; ease; forwards);
+    .animation-delay(2s);
 }
 
 .high-rize.title-text {
@@ -53,8 +59,40 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .widget {
     display: none;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.right-nav-container {
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+}
+
+.nav-button {
+    .set-font(@contentFont; @lighterWeight; normal; 24px; @highrizeWhite);
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+
+.nav-button:hover {
+    border: 1px solid @highrizeWhite;
+}
+
+.top-row {
+    height: 60%;
+}
+
+.bottom-row {
+    height: 40%;
 }

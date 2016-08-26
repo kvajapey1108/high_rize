@@ -18,7 +18,8 @@
     left: 0;
     z-index: 9999;
     opacity: 0;
-
+    .animation(fadeIn; 1s; linear; forwards);
+    .animation-delay(8s);
 }
 
 .page-background {
@@ -141,4 +142,10 @@
 }
 
 .p-profile-1 img {
+    transition: transform 0.2s linear;
+}
+
+.p-profile-1 img:hover {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
 }

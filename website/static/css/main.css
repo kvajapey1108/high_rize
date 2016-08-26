@@ -54,6 +54,14 @@
     left: 0;
   z-index: 9999;
   opacity: 0;
+  -webkit-animation: fadeIn 1s linear forwards;
+  -moz-animation: fadeIn 1s linear forwards;
+  -ms-animation: fadeIn 1s linear forwards;
+  -o-animation: fadeIn 1s linear forwards;
+  animation: fadeIn 1s linear forwards;
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  animation-delay: 8s;
 }
 .page-background {
   background-image: url(../images/saheer/saheer-standing-1-texture.jpg);
@@ -214,4 +222,11 @@
   -moz-animation-delay: 5s;
   animation-delay: 5s;
   position: relative;
+}
+.p-profile-1 img {
+  transition: transform 0.2s linear;
+}
+.p-profile-1 img:hover {
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
 }

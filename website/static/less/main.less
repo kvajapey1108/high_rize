@@ -3,11 +3,29 @@
 @import './animations.less';
 @import '../css/animate.css';
 
-.page-background {
-    background-image: url(../images/saheer/test.png);
-    background-color: @highrizeBlack;
-    background-position: right center;
+.screen {
+    overflow: scroll;
+}
+
+.logo-bar {
+    height: 60px;
+    background-image: url(../images/content/highrizeent_white.png);
+    background-size: 40px auto;
+    background-position: center center;
     background-repeat: no-repeat;
+    position: fixed;
+    top: 0
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+
+}
+
+.page-background {
+    background-image: url(../images/saheer/saheer-standing-1-texture.jpg);
+    background-color: @highrizeBlack;
+    background-position: center center;
+    background-repeat: repeat-x;
     height: 100%;
     width: 100%;
     .display-flex;
@@ -18,6 +36,14 @@
     .flex-wrap(wrap);
     .animation(blur; 2s; linear; forwards);
     .animation-delay(3s);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.page-background .background-image {
+    position: fixed;
+    right: 0;
 }
 
 .page-container {
@@ -35,10 +61,12 @@
 .main-container{
     background: transparent;
     border: 2px solid @highrizeWhite;
-    height: 500px;
+}
+
+.player-container {
     opacity: 0;
     .animation(fadeIn; 1s; linear; forwards);
-    .animation-delay(5s);
+    .animation-delay(7s);
 }
 
 .enter-one {
@@ -46,9 +74,7 @@
     .animation-delay(2s);
 }
 
-.high-rize.title-text {
-    .animation(fadeOut; 1s; linear; forwards);
-    .animation-delay(4s);
+.high-rize.logo-container {
     .display-flex;
     .justify-content-new(center);
     .justify-content-old(center);
@@ -60,6 +86,11 @@
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.logo {
+    .animation(fadeOut; 1s; linear; forwards);
+    .animation-delay(4s);
 }
 
 .widget {
@@ -89,10 +120,25 @@
     border: 1px solid @highrizeWhite;
 }
 
+.full-height {
+    height: 100%;
+}
+
 .top-row {
     height: 60%;
 }
 
 .bottom-row {
     height: 40%;
+}
+
+.p-profile-1 {
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+    .animation(slideInUp; 0.8s; linear; forwards);
+    .animation-delay(5s);
+    position: relative;
+}
+
+.p-profile-1 img {
 }

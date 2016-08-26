@@ -10,23 +10,26 @@
     <script type="text/javascript" src="../static/scripts/libs/soundcloud-api.js"></script>
 </head>
 <body>
-    <div class="page-background blur"></div>
-    <div class="page-container">
-        <div class="flex-container no-pad no-margin full-height">
+    <div class="logo-bar dark background-container"></div>
+    <div id="screen-1" class="screen">
+        <div class="page-background blur">
+            <img class="background-image image-1" src="../static/images/saheer/saheer-standing-1.jpg" height="100%"/>
+        </div>
+        <div class="page-container">
             <div class="background-container main-container">
-                    <div class="background-container half-width">
-                        <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/35667724" width="100" height="100" scrolling="no" frameborder="no"></iframe>
+                    <div class="background-container half-width full-height">
+                        <div class="flex-container top-row player-container">
+                            <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/35667724" width="100" height="100" scrolling="no" frameborder="no"></iframe>
+                        </div>
+                        <div class="background-container bottom-row p-profile-1">
+                            <img src="../static/images/saheer/saheer-profile-1.jpg" height="100%"/>
+                        </div>
                     </div>
                     <div class="background-container half-width">
                     </div>
             </div>
-            <div class="title-text high-rize">High Rize ENT</div>
-        </div>
-        <div class="right-nav-container flex-container enter-one">
-            <div class="background-container">
-                <div class="nav-button flex-container narrow">Listen</div>
-                <div class="nav-button flex-container narrow">Explore</div>
-                <div class="nav-button flex-container narrow">Contact</div>
+            <div class="high-rize logo-container">
+                <img class="logo" src="../static/images/content/highrizeent_white.png" width="300px"/>
             </div>
         </div>
     </div>
@@ -34,6 +37,7 @@
         
         $(document).ready(function() {
            initPlayerWidget(); 
+
         });
 
         function initPlayerWidget() {

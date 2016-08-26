@@ -23,28 +23,43 @@
 }
 @-webkit-keyframes blur {
   to {
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
   }
 }
 @-moz-keyframes blur {
   to {
-    -moz-filter: blur(10px);
-    filter: blur(10px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
   }
 }
 @keyframes blur {
   to {
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
   }
 }
-.page-background {
-  background-image: url(../images/saheer/test.png);
-  background-color: #000000;
-  background-position: right center;
+.screen {
+  overflow: scroll;
+}
+.logo-bar {
+  height: 60px;
+  background-image: url(../images/content/highrizeent_white.png);
+  background-size: 40px auto;
+  background-position: center center;
   background-repeat: no-repeat;
+  position: fixed;
+  top: 0
+    left: 0;
+  z-index: 9999;
+  opacity: 0;
+}
+.page-background {
+  background-image: url(../images/saheer/saheer-standing-1-texture.jpg);
+  background-color: #000000;
+  background-position: center center;
+  background-repeat: repeat-x;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -74,6 +89,13 @@
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
   animation-delay: 3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.page-background .background-image {
+  position: fixed;
+  right: 0;
 }
 .page-container {
   position: fixed;
@@ -89,16 +111,17 @@
 .main-container {
   background: transparent;
   border: 2px solid #ffffff;
-  height: 500px;
+}
+.player-container {
   opacity: 0;
   -webkit-animation: fadeIn 1s linear forwards;
   -moz-animation: fadeIn 1s linear forwards;
   -ms-animation: fadeIn 1s linear forwards;
   -o-animation: fadeIn 1s linear forwards;
   animation: fadeIn 1s linear forwards;
-  -webkit-animation-delay: 5s;
-  -moz-animation-delay: 5s;
-  animation-delay: 5s;
+  -webkit-animation-delay: 7s;
+  -moz-animation-delay: 7s;
+  animation-delay: 7s;
 }
 .enter-one {
   -webkit-animation: slideInDown 2s ease forwards;
@@ -110,15 +133,7 @@
   -moz-animation-delay: 2s;
   animation-delay: 2s;
 }
-.high-rize.title-text {
-  -webkit-animation: fadeOut 1s linear forwards;
-  -moz-animation: fadeOut 1s linear forwards;
-  -ms-animation: fadeOut 1s linear forwards;
-  -o-animation: fadeOut 1s linear forwards;
-  animation: fadeOut 1s linear forwards;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  animation-delay: 4s;
+.high-rize.logo-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -141,6 +156,16 @@
   top: 0;
   left: 0;
   z-index: -1;
+}
+.logo {
+  -webkit-animation: fadeOut 1s linear forwards;
+  -moz-animation: fadeOut 1s linear forwards;
+  -ms-animation: fadeOut 1s linear forwards;
+  -o-animation: fadeOut 1s linear forwards;
+  animation: fadeOut 1s linear forwards;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
 }
 .widget {
   display: none;
@@ -168,9 +193,25 @@
 .nav-button:hover {
   border: 1px solid #ffffff;
 }
+.full-height {
+  height: 100%;
+}
 .top-row {
   height: 60%;
 }
 .bottom-row {
   height: 40%;
+}
+.p-profile-1 {
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0);
+  -webkit-animation: slideInUp 0.8s linear forwards;
+  -moz-animation: slideInUp 0.8s linear forwards;
+  -ms-animation: slideInUp 0.8s linear forwards;
+  -o-animation: slideInUp 0.8s linear forwards;
+  animation: slideInUp 0.8s linear forwards;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s;
+  position: relative;
 }

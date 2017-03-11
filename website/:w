@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/libs/soundcloud-api.js"></script>
+</head>
+<body>
+    <div class="logo-bar dark background-container"></div>
+    <div id="screen-1" class="screen">
+        <div class="page-background blur">
+            <img class="background-image image-1" src="../static/images/saheer/saheer-standing-1.jpg" height="100%"/>
+        </div>
+        <div class="page-container">
+            <div class="background-container full-height content-container no-wrap">
+                <div class="flex-container">
+                    <div class="flex-container">
+                        <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/35667724" width="100" height="100" scrolling="no" frameborder="no"></iframe>
+                    </div>
+                    <iframe class="video-embed" width="80%" height="auto" src="https://www.youtube.com/embed/K8lf260tTm0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="flex-container left third">
+                    <div class="background-container nav-contianer">
+                        <ul>
+                            <li class="nav-link">Home</li>
+                            <li class="nav-link">Music</li>
+                            <li class="nav-link">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="high-rize logo-container">
+                <img class="logo" src="../static/images/content/highrizeent_white.png" width="300px"/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+           initPlayerWidget(); 
+
+        });
+
+        function initPlayerWidget() {
+            var widgetIframe = document.getElementById('sc-widget');
+            var widget = SC.Widget(widgetIframe);
+            
+            console.log(widget);
+            initPlayerControls(widget);
+
+            widget.bind(SC.Widget.Events.READY, function() {
+                widget.bind(SC.Widget.Events.PLAY, function(data) {
+                    console.log(data);
+                    // get information about currently playing sound
+                    widget.getCurrentSound(function(currentSound) {
+                        console.log(currentSound);
+                        console.log('sound ' + currentSound + 'began to play');
+                    });
+                });
+                // get current level of volume
+                widget.getVolume(function(volume) {
+                    console.log('current volume value is ' + volume);
+                });
+                // set new volume level
+                widget.setVolume(50);
+                // get the value of the current position
+
+            });
+
+        }
+
+        function initPlayerControls(player) {
+            document.body.onkeyup = function(e){
+                if(e.keyCode == 32){
+                    console.log('space');
+                    player.toggle();
+                }
+            }
+            
+        }
+
+    </script>
+</body>

@@ -111,6 +111,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/static\/images\/backgrounds\/hr_background.jpg": {
+		"ft": 16384,
+		"iS": 274754,
+		"oA": 0,
+		"oAP": "\/static\/images\/backgrounds\/hr_background.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/static\/images\/content\/HighRizeENT-white-small.png": {
 		"ft": 32768,
 		"iS": 13326,
@@ -259,12 +267,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/static\/less\/.construction.less.swp",
-		"oF": 0
-		},
-	"\/static\/less\/.main.less.swp": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/static\/less\/.main.less.swp",
 		"oF": 0
 		},
 	"\/static\/less\/animations.less": {
